@@ -70,6 +70,7 @@ main {
   padding: 5px;
   padding-left: 20px;
   padding-right: 20px;
+  padding-bottom: 20px;
   scroll-margin-top: 100px;
   border-radius: var(--card-border-radius);
   position: relative;
@@ -96,8 +97,19 @@ main {
   right: 0px;
   z-index: 30;
 }
-.btn__a {
+.btn__show {
   font-family: Roboto, sans-serif;
   display: block;
+  width: 100px;
+  height: 30px;
   margin: 20px auto;
+}
+.holder {
+  display: flex;
+  direction: row;
+  justify-content: space-evenly;
+  margin-top: 10px;
+}
+.btn__a {
+  font-family: Roboto, sans-serif;
 }
