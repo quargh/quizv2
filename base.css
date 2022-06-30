@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+/*Vars declaration*/
+:root {
+  --card-border-radius: 8px;
+
+  --color-primary: #dcedc8;
+  --color-primary-dark: #aabb97;
+  --color-primary-light: #fffffb;
+  --color-bg: #dcedc8;
+  --color-bg-card: #ffffff;
+}
+.resize {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
