@@ -7,12 +7,17 @@
   font-family: Roboto, sans-serif;
 }
 
+html{
+ _overflow:hidden;
+}
+
 textarea {
   font-size: 16px;
   padding: 6px;
 }
 
 body {
+  height: 100%;
   background-color: var(--color-bg);
   _display: flex;
   _flex-direction: column;
