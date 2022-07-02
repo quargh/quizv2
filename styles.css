@@ -32,10 +32,10 @@ main {
   gap: 20px;
 }
 .create__section {
-  __display: grid;
-  __grid-template-columns: 1fr;
-  __justify-items: center;
-  __gap: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  gap: 20px;
 }
 
 .header {
