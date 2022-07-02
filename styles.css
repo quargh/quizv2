@@ -126,7 +126,7 @@ main {
   font-family: Roboto, sans-serif;
 }
 
-@media (min-width: 799px) {
+@media (min-width: 499px) {
   .main__section {
     display: grid;
     grid-template-columns: 1fr 1fr;
