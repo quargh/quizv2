@@ -7,7 +7,9 @@
   font-family: Roboto, sans-serif;
 }
 
-
+textarea {
+  font-size: 16px;
+}
 
 body {
   background-color: var(--color-bg);
@@ -21,23 +23,21 @@ body {
 }
 main {
   padding: 20px;
-
 }
 .main__section {
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
-  gap: 20px; 
+  gap: 20px;
 }
 .create__section {
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
-  gap: 20px; 
+  gap: 20px;
 }
 
 .header {
-  
   color: black;
   height: 80px;
   padding: 0px;
@@ -76,7 +76,6 @@ main {
 }
 
 .card {
-  font-family: Roboto, sans-serif;
   border: 0px solid black;
   box-shadow: 0px 0px 0px 0 black;
   background-color: var(--color-bg-card);
@@ -97,6 +96,9 @@ main {
 .card__heading {
   font-family: Roboto, sans-serif;
   margin: 10px 0 10px 0;
+}
+.card__text {
+  font-size: 16px;
 }
 
 .card__bookmark {
