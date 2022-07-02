@@ -8,7 +8,7 @@
 }
 
 html{
- _overflow:hidden;
+ overflow:hidden;
 }
 
 textarea {
