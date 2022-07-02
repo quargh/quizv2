@@ -4,6 +4,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: Roboto, sans-serif;
 }
 
 
@@ -23,18 +24,20 @@ main {
 
 }
 .main__section {
-
-
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
-  gap: 20px;
-  
+  gap: 20px; 
+}
+.create__section {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  gap: 20px; 
 }
 
-
 .header {
-  font-family: Roboto, sans-serif;
+  
   color: black;
   height: 80px;
   padding: 0px;
