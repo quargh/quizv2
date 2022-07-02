@@ -131,7 +131,6 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
-    background-color: #ff4a11;
   }
 }
 
@@ -140,6 +139,5 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-items: center;
-    background-color: #ff4a11;
   }
 }
