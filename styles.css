@@ -135,7 +135,7 @@ main {
   }
 }
 
-@media (min-width: 1599px) {
+@media (min-width: 999px) {
   .main__section {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
