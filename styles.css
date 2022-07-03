@@ -34,12 +34,10 @@ main {
   grid-template-columns: 1fr;
   justify-items: center;
   gap: 20px;
-  
-
- 
-
- 
 }
+
+
+
 .create__section {
   display: grid;
   grid-template-columns: 1fr;
@@ -102,6 +100,52 @@ main {
   /* give the card a position property to be an anchor for other elements, that need to be positioned inside the card. */
 }
 
+.card__grid {
+  background-color:#ccc;
+  display:grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: minmax(5em, auto);
+  gap:1em;
+  padding:1em;
+  max-width:100%;
+ 
+}
+
+.card__grid > div {
+  background:#f2f2f2;
+}
+
+.card__grid > div:nth-child(2) {
+  background:lightpink;
+  display:grid;
+  grid-auto-rows: minmax(auto, auto);
+}
+
+.card__grid > div:nth-child(2) > p {
+  display:flex;
+  align-items:stretch;
+}
+
+.card__grid > div:nth-child(3) {
+  background:skyblue;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card__grid > div:nth-child(4) {
+  background:lightgreen;
+  display:flex;
+  align-items:flex-end;
+  justify-content: space-evenly;
+}
+
+.card__grid > div:nth-child(4) > div {
+  background:magenta;
+  display:flex;
+
+}
+
 
 
 .card__heading {
@@ -149,7 +193,7 @@ main {
 }
 .btn__a {
   font-family: Roboto, sans-serif;
-  padding: 5px;
+  _padding: 5px;
 }
 /*calc(var(--card-width) * 2 + var(--min-space-around-cards) *3 )*/
 /*calc((var(--card-width)) * 2)*/
@@ -161,6 +205,9 @@ main {
     justify-items: center;
    
   }
+  .card__grid > div:nth-child(2) {
+    grid-auto-rows: minmax(150px, auto);
+  }
 }
 
 @media (min-width: 990px) {
@@ -169,6 +216,9 @@ main {
     grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;
   }
+  .card__grid > div:nth-child(2) {
+    grid-auto-rows: minmax(600px, auto);
+  }
 }
 
 @media (min-width: 1320px) {
@@ -176,5 +226,8 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-items: center;
+  }
+  .card__grid > div:nth-child(2) {
+    grid-auto-rows: minmax(600px, auto);
   }
 }
