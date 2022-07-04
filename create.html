@@ -7,39 +7,35 @@
     <title>Quiz-App</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
-  
+
   <body>
     <header class="header">
-      <h1 class="header__heading">Create</h1>
+      <h1 class="header__heading">Create question</h1>
     </header>
     <main>
       <section class="create__section">
-        <div>
-          <h2>Add question</h2>
-          <textarea
-            id="question"
-            name="question"
-            rows="4"
-            cols="20"
-            placeholder="Enter your question"
-          ></textarea>
-        </div>
-        <div>
-          <h2>Add answer</h2>
-          <textarea
-            id="answer"
-            name="answer"
-            rows="4"
-            cols="20"
-            placeholder="Enter your answer"
-          ></textarea>
-        </div>
-        <div>
-          <h2>Add tags</h2>
-          <textarea id="answer" name="answer" rows="2" cols="20"placeholder="Enter tags divided by comma"></textarea
-          >
-        </div>
-        <button type="button" class="btn__show">Submit</button>
+        <article class="card__create">
+          <form class="form question__form" action="" method="get">
+            <div>
+              <label class="question-headline" for=" question-text">
+                Add your question
+              </label>
+
+              <textarea
+                class="area-1"
+                id="question"
+                name="question"
+                rows="5"
+                cols="40"
+                placeholder="Enter your question"
+              ></textarea>
+            </div>
+
+            <button type="button" class="btn__submit" value="submit">
+              Submit
+            </button>
+          </form>
+        </article>
       </section>
     </main>
 
@@ -78,5 +74,4 @@
       </section>
     </nav>
   </body>
-
 </html>
