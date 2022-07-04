@@ -9,6 +9,8 @@
   --color-primary-light: #fffffb;
   --color-bg: #dcedc8;
   --color-bg-card: #ffffff;
+
+  --min-space-around-cards: 20px;
 }
 .resize {
   max-width: 100%;
