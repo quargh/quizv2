@@ -153,7 +153,25 @@ main {
 }
 /*calc(var(--card-width) * 2 + var(--min-space-around-cards) *3 )*/
 /*calc((var(--card-width)) * 2)*/
+.imgx{
+  max-width: 100%;
+  height: auto;
+}
+.flexx{
+  display: flex;
+  flex-direction:column;
+  flex-wrap: wrap;
+}
+@media (min-width: 660px) {
+  .flexx {
+    display: flex;
+    flex-direction:column;
+   
+  }
+}
 
+
+/*
 @media (min-width: 660px) {
   .main__section {
     display: grid;
@@ -178,3 +196,4 @@ main {
     justify-items: center;
   }
 }
+*/
