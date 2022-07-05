@@ -147,6 +147,10 @@ main {
 /*calc(var(--card-width) * 2 + var(--min-space-around-cards) *3 )*/
 /*calc((var(--card-width)) * 2)*/
 
+.card__answer{
+  visibility: hidden;
+}
+
 @media (min-width: 660px) {
   .main__section {
     display: grid;
