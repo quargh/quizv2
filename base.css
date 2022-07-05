@@ -11,6 +11,7 @@
   --color-bg-card: #ffffff;
 
   --min-space-around-cards: 20px;
+  --card-width: 400px;
 }
 .resize {
   max-width: 100%;
