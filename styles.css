@@ -1,5 +1,6 @@
 @import "./base.css";
 @import "./components/create.css";
+@import "./components/button__answer/button__answer--show.css";
 
 * {
   box-sizing: border-box;
@@ -111,16 +112,6 @@ main {
   right: 0px;
   z-index: 30;
 }
-.btn__show {
-  font-family: Roboto, sans-serif;
-  display: block;
-  width: 100px;
-  height: 30px;
-  position: absolute;
-  bottom: 80px;
-  left: 50%;
-  transform: translate(-50%);
-}
 
 .btn__test {
   font-family: Roboto, sans-serif;
@@ -130,6 +121,8 @@ main {
 .holder {
   display: flex;
   direction: row;
+  /*TODO*/
+  -flex-wrap: wrap;
   justify-content: space-around;
   gap: 5px;
   position: absolute;
@@ -147,7 +140,7 @@ main {
 /*calc(var(--card-width) * 2 + var(--min-space-around-cards) *3 )*/
 /*calc((var(--card-width)) * 2)*/
 
-.card__answer{
+.card__answer {
   visibility: hidden;
 }
 
