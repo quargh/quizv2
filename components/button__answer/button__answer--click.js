@@ -1,25 +1,42 @@
 export function ButtonAnswerClick() {
-  const button = document.querySelector('[data-js="button"]');
+  // Antworten holen:
+  const answers = document.querySelectorAll('[data-js="answer"]');
+  // Antworten unsichtbar schalten:
+  answers.forEach((answer, index) => {
+    answer.style.visibility = "hidden";
+  });
 
-  //--//
+  // Buttons holen:
+  const buttons = document.querySelectorAll('[data-js="button"]');
 
-  const answer = document.querySelector('[data-js="answer"]');
+  
+  const elements = new Array();
+  for (let i=0; i<buttons.length; i++){
+    const element = new Object();
+    element.button = buttons[i];
+    element.answer = answers[i];
+    element.index = i;
+    elements.push(element);
+  }
+  
+  // Click Listener:
+  buttons.forEach((button, index) => {
+    console.log("index: " + index);
+    button.addEventListener("click", onButtonClick);
 
-  answer.style.visibility = "hidden";
+    function onButtonClick() {
+      console.log(index);
 
-  //------------------------------------//
+      const myAnswer = elements[index].answer;
+      const myButton = elements[index].button;
 
-  function onButtonClick() {}
-  /*oder*/
-  onButtonClick = function () {
-    if (answer.style.visibility == "hidden") {
-      answer.style.visibility = "visible";
-      button.textContent = "Hide answer";
-    } else {
-      answer.style.visibility = "hidden";
-      button.textContent = "Show answer";
+      if (myAnswer.style.visibility == "hidden") {
+        myAnswer.style.visibility = "visible";
+        myButton.textContent = "Hide answer";
+      } else {
+        myAnswer.style.visibility = "hidden";
+        myButton.textContent = "Show answer";
+      }
     }
-  };
-
-  button.addEventListener("click", onButtonClick);
+  });
 }

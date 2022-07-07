@@ -1,3 +1,6 @@
+<!-- PAGE - INDEX -->
+
+<div class="page-index" data-js="pages">
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -14,6 +17,7 @@
     <main>
       <section class="main__section">
         <article class="card">
+          <h2 class="card__heading">Question:</h2>
           <a href="##">
             <img
               src="/images/bookmark-outline.svg"
@@ -22,7 +26,7 @@
               data-js="button__bookmark"
             />
           </a>
-          <h2 class="card__heading">Question:</h2>
+
           <p class="card__text">Wie heißt die Hauptstadt von Paraguay?</p>
           <button type="button" class="button__gen btn__show" data-js="button">
             Show answer
@@ -41,26 +45,202 @@
         </article>
         <article class="card">
           <h2 class="card__heading">Question:</h2>
-          <img
-            src="/images/bookmark-outline.svg"
-            alt="bookmark"
-            class="card__bookmark"
-            data-js="button__bookmark"
-          />
-
+          <a href="##">
+            <img
+              src="/images/bookmark-outline.svg"
+              alt="bookmark"
+              class="card__bookmark"
+              data-js="button__bookmark"
+            />
+          </a>
           <p class="card__text">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias
             vitae libero harum! Odit consequatur veritatis, hic qui, facere
             distincLorem ipsum dolor sit?
           </p>
-          <button type="button" class="button__gen btn__show">
+          <button type="button" class="button__gen btn__show" data-js="button">
             Show answer
           </button>
+          <div class="card__answer" data-js="answer">
+            <h2 class="card__heading" data-js="answer_headline">Answer:</h2>
+            <p class="card__text" data-js="answer_text">Asunsión</p>
+          </div>
           <div class="holder">
             <button type="button" class="btn__a">tag 1</button>
             <button type="button" class="btn__a">tag 2</button>
             <button type="button" class="btn__a">tag 3</button>
             <button type="button" class="btn__a">tag 4</button>
+          </div>
+        </article>
+        <article class="card">
+          <h2 class="card__heading">Question:</h2>
+          <a href="##">
+            <img
+              src="/images/bookmark.svg"
+              alt="bookmark"
+              class="card__bookmark"
+              data-js="button__bookmark"
+            />
+          </a>
+          <p class="card__text">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias
+            vitae libero harum! Odit consequatur veritatis, hic qui, facere
+            distincLorem ipsum dolor sit?
+          </p>
+          <button type="button" class="button__gen btn__show" data-js="button">
+            Show answer
+          </button>
+          <div class="card__answer" data-js="answer">
+            <h2 class="card__heading" data-js="answer_headline">Answer:</h2>
+            <p class="card__text" data-js="answer_text">Asunsión</p>
+          </div>
+          <div class="holder">
+            <button type="button" class="btn__a">tag 1</button>
+            <button type="button" class="btn__a">tag 2</button>
+            <button type="button" class="btn__a">tag 3</button>
+            <button type="button" class="btn__a">tag 4</button>
+          </div>
+        </article>
+        <article class="card">
+          <h2 class="card__heading">Question:</h2>
+          <a href="##">
+            <img
+              src="/images/bookmark-outline.svg"
+              alt="bookmark"
+              class="card__bookmark"
+              data-js="button__bookmark"
+            />
+          </a>
+          <p class="card__text">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit?
+          </p>
+          <button type="button" class="button__gen btn__show" data-js="button">
+            Show answer
+          </button>
+          <div class="card__answer" data-js="answer">
+            <h2 class="card__heading" data-js="answer_headline">Answer:</h2>
+            <p class="card__text" data-js="answer_text">Asunsión</p>
+          </div>
+          <div class="holder">
+            <button type="button" class="btn__a">tag 1</button>
+            <button type="button" class="btn__a">tag 2</button>
+            <button type="button" class="btn__a">tag 3</button>
+            <button type="button" class="btn__a">tag 4</button>
+          </div>
+        </article>
+        <article class="card">
+          <h2 class="card__heading">Question:</h2>
+          <a href="##">
+            <img
+              src="/images/bookmark-outline.svg"
+              alt="bookmark"
+              class="card__bookmark"
+              data-js="button__bookmark"
+            />
+          </a>
+          <p class="card__text">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias
+            vitae libero harum! Odit consequatur veritatis, hic qui, facere
+            distincLorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Alias vitae libero
+          </p>
+          <button type="button" class="button__gen btn__show" data-js="button">
+            Show answer
+          </button>
+          <div class="card__answer" data-js="answer">
+            <h2 class="card__heading" data-js="answer_headline">Answer:</h2>
+            <p class="card__text" data-js="answer_text">Asunsión</p>
+          </div>
+          <div class="holder">
+            <button type="button" class="btn__a">tag 1</button>
+            <button type="button" class="btn__a">tag 2</button>
+            <button type="button" class="btn__a">tag 3</button>
+            <button type="button" class="btn__a">tag 4</button>
+          </div>
+        </article>
+      </section>
+    </main>
+    <nav class="nav">
+      <section class="nav-area">
+        <ul class="nav-list">
+          <li>
+            <button type="button" class="nav-button nav-home" data-js="toggle-index">
+              <img src="/images/home.svg" alt="home" class="nav-item" />
+            </button>
+          </li>
+          <li>
+            <button type="button" class="nav-button nav-bookmarks" data-js="toggle-index">
+              <img
+                src="/images/bookmark-outline.svg"
+                alt="bookmarks"
+                class="nav-item"
+              />
+            </button>
+          </li>
+          <li>
+            <button type="button" class="nav-button nav-create" data-js="toggle-index">
+              <img
+                src="/images/text-box-outline.svg"
+                alt="create"
+                class="nav-item"
+              />
+            </button>
+          </li>
+          <li>
+            <button type="button" class="nav-button nav-profile" data-js="toggle-index">
+              <img
+                src="/images/account-outline.svg"
+                alt="profile"
+                class="nav-item"
+              />
+            </button>
+          </li>
+        </ul>
+      </section>
+    </nav>
+    <script src="./index.js" type="module" defer></script>
+  </body>
+</html>
+</div>
+
+<!-- END OF PAGE - INDEX -->
+
+<!-- PAGE - BOOKMARKS -->
+
+<div class="page-bookmarks" data-js="pages">
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Quiz-App</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="header__heading">Bookmarks</h1>
+    </header>
+    <main>
+      <section class="main__section">
+        <article class="card" id="top">
+          <h2 class="card__heading">Question:</h2>
+          <img
+            src="/images/bookmark.svg"
+            alt="bookmark"
+            class="card__bookmark"
+          />
+          <p class="card__text">
+            x Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias
+            vitae libero harum! Odit consequatur veritatis?
+          </p>
+          <button type="button" class="button__gen btn__show">Show answer</button>
+          <div class="holder">
+            <button type="button" class="btn__a">answer 1</button>
+            <button type="button" class="btn__a">answer 2</button>
+            <button type="button" class="btn__a">answer 3</button>
+            <button type="button" class="btn__a">answer 4</button>
           </div>
         </article>
         <article class="card">
@@ -70,19 +250,290 @@
             alt="bookmark"
             class="card__bookmark"
           />
+
           <p class="card__text">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias
             vitae libero harum! Odit consequatur veritatis, hic qui, facere
-            distincLorem ipsum dolor sit?
+            distincLorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Alias vitae libero
           </p>
-          <button type="button" class="button__gen btn__show">
-            Show answer
-          </button>
+          <button type="button" class="button__gen btn__show">Show answer</button>
           <div class="holder">
-            <button type="button" class="btn__a">tag 1</button>
-            <button type="button" class="btn__a">tag 2</button>
-            <button type="button" class="btn__a">tag 3</button>
-            <button type="button" class="btn__a">tag 4</button>
+            <button type="button" class="btn__a">answer 1</button>
+            <button type="button" class="btn__a">answer 2</button>
+            <button type="button" class="btn__a">answer 3</button>
+            <button type="button" class="btn__a">answer 4</button>
+          </div>
+        </article>
+        <article class="card">
+          <h2 class="card__heading">Question:</h2>
+          <img
+            src="/images/bookmark.svg"
+            alt="bookmark"
+            class="card__bookmark"
+          />
+
+          <p class="card__text">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias
+            vitae libero harum! Odit consequatur veritatis, hic qui, facere
+            distincLorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Alias vitae libero
+          </p>
+          <button type="button" class="button__gen btn__show">Show answer</button>
+          <div class="holder">
+            <button type="button" class="btn__a">answer 1</button>
+            <button type="button" class="btn__a">answer 2</button>
+            <button type="button" class="btn__a">answer 3</button>
+            <button type="button" class="btn__a">answer 4</button>
+          </div>
+        </article>
+        <article class="card">
+          <h2 class="card__heading">Question:</h2>
+          <img
+            src="/images/bookmark.svg"
+            alt="bookmark"
+            class="card__bookmark"
+          />
+
+          <p class="card__text">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias
+            vitae libero harum! Odit consequatur veritatis, hic qui, facere
+            distincLorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Alias vitae libero
+          </p>
+          <button type="button" class="button__gen btn__show">Show answer</button>
+          <div class="holder">
+            <button type="button" class="btn__a">answer 1</button>
+            <button type="button" class="btn__a">answer 2</button>
+            <button type="button" class="btn__a">answer 3</button>
+            <button type="button" class="btn__a">answer 4</button>
+          </div>
+        </article>
+        <article class="card">
+          <h2 class="card__heading">Question:</h2>
+          <img
+            src="/images/bookmark.svg"
+            alt="bookmark"
+            class="card__bookmark"
+          />
+
+          <p class="card__text">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias
+            vitae libero harum! Odit consequatur veritatis, hic qui, facere
+            distincLorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Alias vitae libero
+          </p>
+          <button type="button" class="button__gen btn__show">Show answer</button>
+          <div class="holder">
+            <button type="button" class="btn__a">answer 1</button>
+            <button type="button" class="btn__a">answer 2</button>
+            <button type="button" class="btn__a">answer 3</button>
+            <button type="button" class="btn__a">answer 4</button>
+          </div>
+        </article>
+
+      </section>
+    </main>
+
+    <nav class="nav">
+      <section class="nav-area">
+        <ul class="nav-list">
+          <li>
+            <button type="button" class="nav-button" data-js="toggle-index">
+              <img src="/images/home-outline.svg" alt="home" class="nav-item" />
+            </button>
+          </li>
+          <li>
+            <button type="button" class="nav-button" data-js="toggle-index">
+              <img
+                src="/images/bookmark.svg"
+                alt="bookmarks"
+                class="nav-item"
+              />
+            </button>
+          </li>
+          <li>
+            <button type="button" class="nav-button" data-js="toggle-index">
+              <img
+                src="/images/text-box-outline.svg"
+                alt="create"
+                class="nav-item"
+              />
+            </button>
+          </li>
+          <li>
+            <button type="button" class="nav-button" data-js="toggle-index">
+              <img
+                src="/images/account-outline.svg"
+                alt="profile"
+                class="nav-item"
+              />
+            </button>
+          </li>
+        </ul>
+      </section>
+    </nav>
+  </body>
+</html>
+
+</div>
+
+<!-- END OF PAGE - BOOKMARKS -->
+
+<!-- PAGE - CREATE -->
+
+<div class="page-create" data-js="pages">
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+      <title>Quiz-App</title>
+      <link rel="stylesheet" href="styles.css" />
+    </head>
+  
+    <body>
+      <header class="header">
+        <h1 class="header__heading">Create question</h1>
+      </header>
+      <main>
+        <section class="create__section">
+          <article class="card__create">
+            <div class="create__holder">
+            <form action="" method="get">
+              <div>
+                <label class="question-headline" for="question-text">
+                  Add your question
+                </label>
+  
+                <textarea
+                  class="area-1"
+                  id="question"
+                  name="question"
+                  rows="4"
+                  cols="10"
+                  placeholder="Enter your question..."
+                ></textarea>
+              </div>
+              <div>
+                <label class="answer-headline" for="answer-text">
+                  Add your answer
+                </label>
+  
+                <textarea
+                  class="area-2"
+                  id="answer"
+                  name="answer"
+                  rows="4"
+                  cols="10"
+                  placeholder="Enter your answer..."
+                ></textarea>
+              </div>
+              <div>
+                <label class="tags-headline" for="tags-text">
+                  Add tags divided by comma
+                </label>
+  
+                <textarea
+                  class="area-3"
+                  id="tags"
+                  name="tags"
+                  rows="1"
+                  cols="10"
+                  placeholder="Enter tags..."
+                ></textarea>
+              </div>
+            </div>
+              <button type="button" class="button__gen btn__submit" value="submit">
+                Submit
+              </button>
+            </form>
+          </article>
+        </section>
+      </main>
+      <nav class="nav">
+        <section class="nav-area">
+          <ul class="nav-list">
+            <li>
+              <button type="button" class="nav-button" data-js="toggle-index">
+                <img src="/images/home-outline.svg" alt="home" class="nav-item" />
+              </button>
+            </li>
+            <li>
+              <button type="button" class="nav-button" data-js="toggle-index">
+                <img
+                  src="/images/bookmark-outline.svg"
+                  alt="bookmarks"
+                  class="nav-item"
+                />
+              </button>
+            </li>
+            <li>
+              <button type="button" class="nav-button" data-js="toggle-index">
+                <img
+                  src="/images/text-box.svg"
+                  alt="create"
+                  class="nav-item"
+                />
+              </button>
+            </li>
+            <li>
+              <button type="button" class="nav-button" data-js="toggle-index">
+                <img
+                  src="/images/account-outline.svg"
+                  alt="profile"
+                  class="nav-item"
+                />
+              </button>
+            </li>
+          </ul>
+        </section>
+      </nav>
+    </body>
+  </html>
+  
+</div>
+
+<!-- END OF PAGE - CREATE -->
+
+<!-- PAGE - PROFILE -->
+
+<div class="page-profile" data-js="pages">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Quiz-App</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="header__heading">Profile</h1>
+    </header>
+    <main>
+      <section class="main__section">
+        <article class="card" id="top">
+          <h2 class="card__heading">Question:</h2>
+          <img
+            src="/images/bookmark-outline.svg"
+            alt="bookmark"
+            class="card__bookmark"
+          />
+          <p class="card__text">
+            x Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias
+            vitae libero harum! Odit consequatur veritatis, hic qui, facere
+            distincLorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Alias
+          </p>
+          <button type="button" class="btn__show">Show answer</button>
+          <div class="holder">
+            <button type="button" class="btn__a">answer 1</button>
+            <button type="button" class="btn__a">answer 2</button>
+            <button type="button" class="btn__a">answer 3</button>
+            <button type="button" class="btn__a">answer 4</button>
           </div>
         </article>
         <article class="card">
@@ -92,17 +543,19 @@
             alt="bookmark"
             class="card__bookmark"
           />
+
           <p class="card__text">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit?
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias
+            vitae libero harum! Odit consequatur veritatis, hic qui, facere
+            distincLorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Alias vitae libero
           </p>
-          <button type="button" class="button__gen btn__show">
-            Show answer
-          </button>
+          <button type="button" class="btn__show">Show answer</button>
           <div class="holder">
-            <button type="button" class="btn__a">tag 1</button>
-            <button type="button" class="btn__a">tag 2</button>
-            <button type="button" class="btn__a">tag 3</button>
-            <button type="button" class="btn__a">tag 4</button>
+            <button type="button" class="btn__a">answer 1</button>
+            <button type="button" class="btn__a">answer 2</button>
+            <button type="button" class="btn__a">answer 3</button>
+            <button type="button" class="btn__a">answer 4</button>
           </div>
         </article>
         <article class="card">
@@ -118,14 +571,54 @@
             distincLorem ipsum dolor sit, amet consectetur adipisicing elit.
             Alias vitae libero
           </p>
-          <button type="button" class="button__gen btn__show">
-            Show answer
-          </button>
+          <button type="button" class="btn__show">Show answer</button>
           <div class="holder">
-            <button type="button" class="btn__a">tag 1</button>
-            <button type="button" class="btn__a">tag 2</button>
-            <button type="button" class="btn__a">tag 3</button>
-            <button type="button" class="btn__a">tag 4</button>
+            <button type="button" class="btn__a">answer 1</button>
+            <button type="button" class="btn__a">answer 2</button>
+            <button type="button" class="btn__a">answer 3</button>
+            <button type="button" class="btn__a">answer 4</button>
+          </div>
+        </article>
+        <article class="card">
+          <h2 class="card__heading">Question:</h2>
+          <img
+            src="/images/bookmark-outline.svg"
+            alt="bookmark"
+            class="card__bookmark"
+          />
+          <p class="card__text">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias
+            vitae libero harum! Odit consequatur veritatis, hic qui, facere
+            distincLorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Alias vitae libero
+          </p>
+          <button type="button" class="btn__show">Show answer</button>
+          <div class="holder">
+            <button type="button" class="btn__a">answer 1</button>
+            <button type="button" class="btn__a">answer 2</button>
+            <button type="button" class="btn__a">answer 3</button>
+            <button type="button" class="btn__a">answer 4</button>
+          </div>
+        </article>
+        <article class="card">
+          <h2 class="card__heading">Question:</h2>
+          <img
+            src="/images/bookmark-outline.svg"
+            alt="bookmark"
+            class="card__bookmark"
+          />
+          <p class="card__text">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias
+            vitae libero harum! Odit consequatur veritatis, hic qui, facere
+            distincLorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Alias vitae libero
+          </p>
+          <button type="button" class="btn__show">Show answer</button>
+          <div class="holder">
+            <button type="button" class="btn__a">answer 1</button>
+            <button type="button" class="btn__a">answer 2</button>
+            <button type="button" class="btn__a">answer 3</button>
+            <button type="button" class="btn__a">answer 4</button>
           </div>
         </article>
       </section>
@@ -135,40 +628,42 @@
       <section class="nav-area">
         <ul class="nav-list">
           <li>
-            <a href="index.html">
-              <img src="/images/home.svg" alt="home" class="nav-item" />
-            </a>
+            <button type="button" class="nav-button nav-home" data-js="toggle-index">
+              <img src="/images/home-outline.svg" alt="home" class="nav-item" />
+            </button>
           </li>
           <li>
-            <a href="bookmarks.html">
+            <button type="button" class="nav-button nav-bookmarks" data-js="toggle-index">
               <img
                 src="/images/bookmark-outline.svg"
                 alt="bookmarks"
                 class="nav-item"
               />
-            </a>
+            </button>
           </li>
           <li>
-            <a href="create.html">
+            <button type="button" class="nav-button nav-create" data-js="toggle-index">
               <img
                 src="/images/text-box-outline.svg"
                 alt="create"
                 class="nav-item"
               />
-            </a>
+            </button>
           </li>
           <li>
-            <a href="profile.html">
+            <button type="button" class="nav-button nav-profile" data-js="toggle-index">
               <img
-                src="/images/account-outline.svg"
+                src="/images/account.svg"
                 alt="profile"
                 class="nav-item"
               />
-            </a>
+            </button>
           </li>
         </ul>
       </section>
     </nav>
-    <script src="./index.js" type="module" defer></script>
   </body>
 </html>
+</div>
+
+<!-- END OF PAGE - PROFILE -->
