@@ -1,7 +1,7 @@
 @import "./base.css";
 @import "./components/create.css";
 @import "./components/button.css";
-
+@import "./components/bookmark/bookmark.css";
 
 * {
   box-sizing: border-box;
@@ -87,7 +87,6 @@ main {
   border-radius: var(--card-border-radius);
   position: relative;
   width: 100%;
-
 }
 
 .card__heading {
@@ -97,23 +96,7 @@ main {
 .card__text {
   font-size: 16px;
   _min-height: 100px;
-  
 }
-
-.card__bookmark {
-  border: 0px solid #ff4a11;
-  font-size: 2em;
-  padding: 0px 6px;
-  border-radius: 20%;
-  width: 70px;
-  height: auto;
-  /*place the bookmark at the top right of the card*/
-  position: absolute;
-  top: -12px;
-  right: 0px;
-  z-index: 30;
-}
-
 
 .holder {
   display: flex;
