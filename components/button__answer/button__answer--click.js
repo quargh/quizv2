@@ -21,11 +21,11 @@ export function ButtonAnswerClick() {
   
   // Click Listener:
   buttons.forEach((button, index) => {
-    console.log("index: " + index);
+    //console.log("index: " + index);
     button.addEventListener("click", onButtonClick);
 
     function onButtonClick() {
-      console.log(index);
+      //console.log(index);
 
       const myAnswer = elements[index].answer;
       const myButton = elements[index].button;
