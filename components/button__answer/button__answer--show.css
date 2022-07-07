@@ -4,7 +4,8 @@
   width: 100px;
   height: 30px;
   position: absolute;
-  bottom: 80px;
+  _bottom: 80px;
   left: 50%;
   transform: translate(-50%);
+  margin-top:20px;
 }

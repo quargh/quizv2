@@ -26,10 +26,14 @@
   position: absolute;
   top: 20px;
   left: 50%;
-  transform: translateX(-120%);
+  transform: translateX(-50%);
   margin-left: auto;
   margin-right: auto;
-  text-align: center;
+  _text-align: center;
+
+  _background-color:var(--color-primary);
+  width:100%;
+  max-width: 308px;
 }
 .area-1 {
   font-size: 14px;
@@ -53,10 +57,14 @@
   position: absolute;
   top: 150px;
   left: 50%;
-  transform: translateX(-129%);
+  transform: translateX(-50%);
   margin-left: auto;
   margin-right: auto;
-  text-align: center;
+  _text-align: center;
+
+  _background-color:var(--color-primary);
+  width:100%;
+  max-width: 308px;
 }
 .area-2 {
   font-size: 14px;
@@ -80,10 +88,13 @@
   position: absolute;
   top: 280px;
   left: 50%;
-  transform: translateX(-78%);
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
+  transform: translateX(-50%);
+  _margin-left: auto;
+  _margin-right: auto;
+  _text-align: center;
+  _background-color:var(--color-primary);
+  width:100%;
+  max-width: 308px;
 }
 .area-3 {
   font-size: 14px;
@@ -104,13 +115,4 @@
   box-shadow: 0 0 10px var(--color-primary-dark);
 }
 
-.btn__submit {
-  font-family: Roboto, sans-serif;
-  display: block;
-  width: 100px;
-  height: 30px;
-  position: absolute;
-  top: 385px;
-  left: 50%;
-  transform: translateX(-50%);
-}
+

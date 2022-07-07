@@ -1,6 +1,7 @@
 @import "./base.css";
 @import "./components/create.css";
-@import "./components/button__answer/button__answer--show.css";
+@import "./components/button.css";
+
 
 * {
   box-sizing: border-box;
@@ -87,7 +88,6 @@ main {
   position: relative;
   width: 100%;
 
-  /* give the card a position property to be an anchor for other elements, that need to be positioned inside the card. */
 }
 
 .card__heading {
@@ -96,7 +96,8 @@ main {
 }
 .card__text {
   font-size: 16px;
-  min-height: 100px;
+  _min-height: 100px;
+  
 }
 
 .card__bookmark {
@@ -113,10 +114,6 @@ main {
   z-index: 30;
 }
 
-.btn__test {
-  font-family: Roboto, sans-serif;
-  width: 200px;
-}
 
 .holder {
   display: flex;
@@ -142,6 +139,7 @@ main {
 
 .card__answer {
   visibility: hidden;
+  margin-top: 65px;
 }
 
 @media (min-width: 660px) {
