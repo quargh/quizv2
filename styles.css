@@ -2,7 +2,6 @@
 @import "./components/create.css";
 @import "./components/button.css";
 
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -87,7 +86,6 @@ main {
   border-radius: var(--card-border-radius);
   position: relative;
   width: 100%;
-
 }
 
 .card__heading {
@@ -97,7 +95,6 @@ main {
 .card__text {
   font-size: 16px;
   _min-height: 100px;
-  
 }
 
 .card__bookmark {
@@ -113,7 +110,6 @@ main {
   right: 0px;
   z-index: 30;
 }
-
 
 .holder {
   display: flex;
@@ -138,7 +134,9 @@ main {
 /*calc((var(--card-width)) * 2)*/
 
 .card__answer {
-  visibility: hidden;
+  /*visibility wird via js geregelt*/
+  /*visibility: hidden;*/
+
   margin-top: 65px;
 }
 

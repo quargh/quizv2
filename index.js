@@ -1,6 +1,8 @@
+import { SetQuestions } from "./components/questions.js";
 import { Bookmark } from "./components/bookmark/bookmark.js";
 import { ButtonAnswerClick } from "./components/button__answer/button__answer--click.js";
 
+SetQuestions();
 Bookmark();
 ButtonAnswerClick();
 
@@ -9,16 +11,16 @@ ButtonAnswerClick();
 // Alle Pages holen
 const pages = document.querySelectorAll('[data-js="pages"]');
 
-// Init 
+// Init
 // alles außer Index wegschalten
 
 pages.forEach((page, index) => {
-    if (index != 0) {
-      page.style.display = "none";
-    } else {
-      page.style.display = "block";
-    }
-  });
+  if (index != 0) {
+    page.style.display = "none";
+  } else {
+    page.style.display = "block";
+  }
+});
 
 const navButtons = document.querySelectorAll('[data-js="toggle-index"]');
 //console.log("navButtons.length: "+navButtons.length)
