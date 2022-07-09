@@ -125,7 +125,7 @@ main {
 
 .holder {
   display: flex;
-  direction: row;
+  flex-direction: row;
   /*TODO*/
   flex-wrap: wrap;
   justify-content:center;
