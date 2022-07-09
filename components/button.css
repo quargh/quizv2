@@ -4,6 +4,6 @@
 .button__gen{
     border-radius:6px;
     border:0px;
-    background-color: #BB9798;
+    background-color: var(--complementary-violet);
     color:white
 }

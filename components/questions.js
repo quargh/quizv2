@@ -4,7 +4,7 @@ export function SetQuestions() {
   const mainSection = document.querySelector('[data-js="main-section"]');
   //const cardList = document.querySelectorAll();
 
-  questions.forEach((card) => {
+  questions.forEach((card, index) => {
     const article = document.createElement("article");
     article.classList.add("card");
     mainSection.append(article);
@@ -16,7 +16,7 @@ export function SetQuestions() {
 
     const image = document.createElement("img");
     image.setAttribute("data-js", "button__bookmark");
-    image.setAttribute("src", "/images/bookmark.svg");
+    image.setAttribute("src", "/images/bookmark-outline.svg");
     image.setAttribute("alt", "bookmark");
     image.classList.add("card__bookmark");
     article.append(image);
@@ -26,7 +26,7 @@ export function SetQuestions() {
     article.append(wrapper);
 
     const question = document.createElement("p");
-    question.innerText = "Wie heisst die Hauptstadt von Paraguay?";
+    question.innerText = questions[index].question;
     wrapper.append(question);
 
     const button = document.createElement("button");
@@ -51,7 +51,7 @@ export function SetQuestions() {
     const answerText = document.createElement("p");
     answerText.classList.add("card__text");
     answerText.setAttribute("data-js", "answer_text");
-    answerText.innerText = "Asuncion";
+    answerText.innerText = questions[index].answer;
     answer.append(answerText);
 
     const wordCloud = document.createElement("div");
@@ -60,25 +60,25 @@ export function SetQuestions() {
 
     const button1 = document.createElement("button");
     button1.setAttribute("type", "button");
-    button1.classList.add("btn_a");
+    button1.classList.add("btn__a");
     button1.innerText = "Geography";
     wordCloud.append(button1);
 
     const button2 = document.createElement("button");
     button2.setAttribute("type", "button");
-    button2.classList.add("btn_a");
+    button2.classList.add("btn__a");
     button2.innerText = "World";
     wordCloud.append(button2);
 
     const button3 = document.createElement("button");
     button3.setAttribute("type", "button");
-    button3.classList.add("btn_a");
+    button3.classList.add("btn__a");
     button3.innerText = "Capitals";
     wordCloud.append(button3);
 
     const button4 = document.createElement("button");
     button4.setAttribute("type", "button");
-    button4.classList.add("btn_a");
+    button4.classList.add("btn__a");
     button4.innerText = "South America";
     wordCloud.append(button4);
 
@@ -99,6 +99,7 @@ const questions = [
   {
     question: "Wie heisst die Hauptstadt von Frankreich?",
     answer: "Paris",
+    tags: ["Test1", "Test2","Test3","Test4"],
   },
   {
     question: "Wie heisst die Hauptstadt von Paraguay?",

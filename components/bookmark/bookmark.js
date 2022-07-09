@@ -1,21 +1,21 @@
 export function Bookmark() {
-  console.log("execute");
+  //console.log("execute");
   const buttonsBookmark = document.querySelectorAll(
     '[data-js="button__bookmark"]'
   );
-  console.log("length: " + buttonsBookmark.length);
+  //console.log("length: " + buttonsBookmark.length);
 
 
   buttonsBookmark.forEach((button, index) => {
-    console.log("index: "+index);
-    console.log("testing: "+button.src);
+    //console.log("index: "+index);
+    //console.log("testing: "+button.src);
     button.addEventListener("click", onBookmarkButtonClick);
 
-
     let isBookmarked = false;
+    //TODO woher weiß ich, ob es schon gebookmarked ist?
 
     function onBookmarkButtonClick() {
-      console.log("clicked: "+isBookmarked);
+      //console.log("clicked: "+isBookmarked);
       if (!isBookmarked) {
         isBookmarked = true;
         button.src = "/images/bookmark.svg";
@@ -26,7 +26,7 @@ export function Bookmark() {
     }
 
   });
-  //buttonsBookmark.addEventListener("click", onBookmarkButtonClick);
+
 
 
 }

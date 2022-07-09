@@ -12,6 +12,14 @@
 
   --min-space-around-cards: 20px;
   --card-width: 400px;
+
+  --triadic-red: #BB97AA;
+  --triadic-blue: #97AABB;
+
+  --triadic-red-filter: invert(70%) sepia(8%) saturate(840%) hue-rotate(276deg) brightness(91%) contrast(84%);
+  --triadic-blue-filter: invert(71%) sepia(10%) saturate(538%) hue-rotate(167deg) brightness(92%) contrast(94%);
+
+ /*filter: invert(73%) sepia(7%) saturate(977%) hue-rotate(308deg) brightness(85%) contrast(93%);*/
 }
 .resize {
   max-width: 100%;
