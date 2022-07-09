@@ -1,5 +1,5 @@
-@import "./base.css";
-@import "./components/create.css";
+@import "./css/base.css";
+@import "./css/create.css";
 @import "./components/button.css";
 
 * {
@@ -86,11 +86,19 @@ main {
   padding-top: 5px;
   padding-left: var(--min-space-around-cards);
   padding-right: var(--min-space-around-cards);
-  padding-bottom: 120px;
+  
   scroll-margin-top: 100px;
   border-radius: var(--card-border-radius);
   position: relative;
   width: 100%;
+  __height: 300px;
+  __min-height: 300px;
+  
+
+  __padding-bottom: auto;
+
+  
+  
 }
 
 .card__heading {
@@ -120,26 +128,24 @@ main {
   direction: row;
   /*TODO*/
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content:center;
   gap: 20px;
-  position: absolute;
-  width: 100%;
-  bottom: 20px;
+  __position: absolute;
+  __width: 100%;
+  __height: 30px;
+  __bottom: 20px;
   /*TODO*/
   left: 50%;
-  transform: translate(-50%);
+  __transform: translate(-50%);
   padding-left:20px;
   padding-right:20px;
+  padding-top:25px;
+  padding-bottom:25px;
+
+  __margin-top:65px;
 
 }
-.btn__a {
 
-  padding:5px 10px 5px 10px;
-  background-color: var(--color-primary-dark);
-  border:0px solid black;
-  border-radius: 6px;
-  color:#ffffff;
-}
 
 /*calc(var(--card-width) * 2 + var(--min-space-around-cards) *3 )*/
 /*calc((var(--card-width)) * 2)*/
@@ -148,7 +154,8 @@ main {
   /*visibility wird via js geregelt*/
   /*visibility: hidden;*/
 
-  margin-top: 65px;
+  margin-top: 0px;
+  __margin-bottom: 65px;
 }
 
 @media (min-width: 660px) {

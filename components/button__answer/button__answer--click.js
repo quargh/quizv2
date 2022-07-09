@@ -5,17 +5,17 @@ export function ButtonAnswerClick() {
     const button = card.querySelector('[data-js="button"]');
     const answer = card.querySelector('[data-js="answer"]');
 
-    answer.style.visibility = "hidden";
+    answer.style.display = "none";
 
     button.addEventListener("click", onButtonClick);
 
     function onButtonClick() {
       console.log("klick");
-      if (answer.style.visibility == "hidden") {
-        answer.style.visibility = "visible";
+      if (answer.style.display == "none") {
+        answer.style.display = "block";
         button.textContent = "Hide answer";
       } else {
-        answer.style.visibility = "hidden";
+        answer.style.display = "none";
         button.textContent = "Show answer";
       }
     }

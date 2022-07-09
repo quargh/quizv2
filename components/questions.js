@@ -29,13 +29,17 @@ export function SetQuestions() {
     question.innerText = questions[index].question;
     wrapper.append(question);
 
+    const centerDiv = document.createElement("div");
+    centerDiv.classList.add("center");
+    wrapper.append(centerDiv);
+
     const button = document.createElement("button");
     button.setAttribute("type", "button");
     button.setAttribute("data-js", "button");
     button.classList.add("button__gen");
     button.classList.add("btn__show");
     button.innerText = "Show answer";
-    wrapper.append(button);
+    centerDiv.append(button);
 
     const answer = document.createElement("div");
     answer.classList.add("card__answer");
@@ -58,40 +62,16 @@ export function SetQuestions() {
     wordCloud.classList.add("holder");
     article.append(wordCloud);
 
-    const button1 = document.createElement("button");
-    button1.setAttribute("type", "button");
-    button1.classList.add("btn__a");
-    button1.innerText = "Geography";
-    wordCloud.append(button1);
+    questions[index].tags.forEach((tag, index) =>{
 
-    const button2 = document.createElement("button");
-    button2.setAttribute("type", "button");
-    button2.classList.add("btn__a");
-    button2.innerText = "World";
-    wordCloud.append(button2);
+      const button = document.createElement("button");
+      button.setAttribute("type", "button");
+      button.classList.add("btn__a");
+      button.innerText = tag;
+      wordCloud.append(button);
 
-    const button3 = document.createElement("button");
-    button3.setAttribute("type", "button");
-    button3.classList.add("btn__a");
-    button3.innerText = "Capitals";
-    wordCloud.append(button3);
+    });
 
-    const button4 = document.createElement("button");
-    button4.setAttribute("type", "button");
-    button4.classList.add("btn__a");
-    button4.innerText = "South America";
-    wordCloud.append(button4);
-
-    /*
-    article.classList.add("card");
-    mainSection.append(article);
-
-    const headline = article.createElement("h2");
-    headline.classList.add("card__heading");
-    headline.innerText = "TestQuestion";
-    article.append(headline);
-  
-    */
   });
 }
 
@@ -99,18 +79,21 @@ const questions = [
   {
     question: "Wie heisst die Hauptstadt von Frankreich?",
     answer: "Paris",
-    tags: ["Test1", "Test2","Test3","Test4"],
+    tags: ["Marseille", "Paris", "Lille", "Lyon"],
   },
   {
     question: "Wie heisst die Hauptstadt von Paraguay?",
-    answer: "Asunsion",
+    answer: "Asunsión",
+    tags: ["Montevideo", "La Paz","Asunción", "Buenos Aires"],
   },
   {
-    question: "Wie heisst die Hauptstadt von Argentinien?",
-    answer: "Buenos Aires",
+    question: "Auf welcher Insel liegt Haiti?",
+    answer: "Hispaniola",
+    tags: ["Curacao", "Hispaniola","Bonaire", "Haiti"],
   },
   {
-    question: "Wie heisst die Hauptstadt von Griechenland?",
-    answer: "Athen",
+    question: "Welche Farbe haben Eisbären?",
+    answer: "Weiß",
+    tags: ["Weiß", "Grün", "Gelb", "Blau"],
   },
 ];
