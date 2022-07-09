@@ -3,7 +3,7 @@
     border-radius:6px;
     border:0px;
     background-color: var(--complementary-violet);
-    color:white;
+    color:000000;
     
 }
 
@@ -17,6 +17,7 @@
     _bottom: 80px;
     __left: 50%;
     __transform: translate(-50%);
+    color:black;
     
   }
 
@@ -26,7 +27,7 @@
     background-color: var(--color-primary-dark);
     border:0px solid black;
     border-radius: 6px;
-    color:#ffffff;
+    color:#000000;
   }
 
   .btn__submit {
@@ -37,5 +38,6 @@
     top: 380px;
     left: 50%;
     transform: translateX(-50%);
+    color:black;
   
   }
