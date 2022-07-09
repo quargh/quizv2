@@ -89,11 +89,11 @@ const questions = [
   {
     question: "Auf welcher Insel liegt Haiti?",
     answer: "Hispaniola",
-    tags: ["Curacao", "Hispaniola","Bonaire", "Haiti"],
+    tags: ["Aruba", "Curaçao", "Bonaire", "Hispaniola"],
   },
   {
     question: "Welche Farbe haben Eisbären?",
     answer: "Weiß",
-    tags: ["Weiß", "Grün", "Gelb", "Blau"],
+    tags: ["Weiß", "Braun", "Grün", "Blau"],
   },
 ];
