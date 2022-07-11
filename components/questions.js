@@ -62,16 +62,13 @@ export function SetQuestions() {
     wordCloud.classList.add("holder");
     article.append(wordCloud);
 
-    questions[index].tags.forEach((tag, index) =>{
-
+    questions[index].tags.forEach((tag, index) => {
       const button = document.createElement("button");
       button.setAttribute("type", "button");
       button.classList.add("btn__a");
       button.innerText = tag;
       wordCloud.append(button);
-
     });
-
   });
 }
 
@@ -84,7 +81,7 @@ const questions = [
   {
     question: "Wie heisst die Hauptstadt von Paraguay?",
     answer: "Asunsión",
-    tags: ["Montevideo", "La Paz","Asunción", "Buenos Aires"],
+    tags: ["Montevideo", "La Paz", "Asunción", "Buenos Aires"],
   },
   {
     question: "Auf welcher Insel liegt Haiti?",
@@ -92,8 +89,8 @@ const questions = [
     tags: ["Aruba", "Curaçao", "Bonaire", "Hispaniola"],
   },
   {
-    question: "Welche Farbe haben Eisbären?",
-    answer: "Weiß",
-    tags: ["Weiß", "Braun", "Grün", "Blau"],
+    question: "Was ist der Sinn des Lebens?",
+    answer: "42",
+    tags: ["39", "42", "70", "420", "6000", "9000"],
   },
 ];
