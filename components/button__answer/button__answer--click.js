@@ -11,7 +11,7 @@ export function ButtonAnswerClick() {
 
     function onButtonClick() {
       console.log("klick");
-      if (answer.style.display == "none") {
+      if (answer.style.display === "none") {
         answer.style.display = "block";
         button.textContent = "Hide answer";
       } else {
