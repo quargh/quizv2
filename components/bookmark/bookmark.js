@@ -5,7 +5,6 @@ export function Bookmark() {
   );
   //console.log("length: " + buttonsBookmark.length);
 
-
   buttonsBookmark.forEach((button, index) => {
     //console.log("index: "+index);
     //console.log("testing: "+button.src);
@@ -24,9 +23,5 @@ export function Bookmark() {
         button.src = "/images/bookmark-outline.svg";
       }
     }
-
   });
-
-
-
 }
