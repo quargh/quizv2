@@ -17,7 +17,6 @@ export function SetBookmarks(questions, callback) {
 
     const questionsIndex = button.getAttribute("data-page");
 
-    let isBookmarked = questions[questionsIndex].isBookmarked;
     //console.log("isBookmarked: " + isBookmarked);
 
     //let isBookmarked = false;

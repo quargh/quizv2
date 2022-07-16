@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Prompt:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Prompt:wght@300&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Prompt:wght@300&family=Titillium+Web&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Prompt:wght@300&family=Titillium+Web&display=swap");
 
 /*Vars declaration*/
 :root {
@@ -19,18 +19,22 @@
   --min-space-around-cards: 20px;
   --card-width: 400px;
 
-  --color-primary-dark-filter: invert(81%) sepia(20%) saturate(336%) hue-rotate(46deg) brightness(88%) contrast(85%);
+  --color-primary-dark-filter: invert(81%) sepia(20%) saturate(336%)
+    hue-rotate(46deg) brightness(88%) contrast(85%);
 
-  --complementary-violet: #A897BB;
-  --complementary-violet-filter: invert(70%) sepia(13%) saturate(592%) hue-rotate(226deg) brightness(89%) contrast(83%);
+  --complementary-violet: #a897bb;
+  --complementary-violet-filter: invert(70%) sepia(13%) saturate(592%)
+    hue-rotate(226deg) brightness(89%) contrast(83%);
 
-  --triadic-red: #BB97AA;
-  --triadic-blue: #97AABB;
+  --triadic-red: #bb97aa;
+  --triadic-blue: #97aabb;
 
-  --triadic-red-filter: invert(70%) sepia(8%) saturate(840%) hue-rotate(276deg) brightness(91%) contrast(84%);
-  --triadic-blue-filter: invert(71%) sepia(10%) saturate(538%) hue-rotate(167deg) brightness(92%) contrast(94%);
+  --triadic-red-filter: invert(70%) sepia(8%) saturate(840%) hue-rotate(276deg)
+    brightness(91%) contrast(84%);
+  --triadic-blue-filter: invert(71%) sepia(10%) saturate(538%)
+    hue-rotate(167deg) brightness(92%) contrast(94%);
 
- /*filter: invert(73%) sepia(7%) saturate(977%) hue-rotate(308deg) brightness(85%) contrast(93%);*/
+  /*filter: invert(73%) sepia(7%) saturate(977%) hue-rotate(308deg) brightness(85%) contrast(93%);*/
 }
 .resize {
   max-width: 100%;
@@ -38,8 +42,7 @@
   height: auto;
 }
 
-.center{
-
+.center {
   display: flex;
   justify-content: center;
   align-items: center;

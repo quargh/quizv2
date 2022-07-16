@@ -70,7 +70,7 @@ export function BuildBookmarksPage(questions) {
       wordCloud.classList.add("holder");
       article.append(wordCloud);
 
-      questions[index].tags.forEach((tag, index) => {
+      questions[index].tags.forEach((tag) => {
         const button = document.createElement("button");
         button.setAttribute("type", "button");
         button.classList.add("btn__a");

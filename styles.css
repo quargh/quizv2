@@ -68,10 +68,9 @@ main {
   justify-content: space-evenly;
   padding-top: 22px;
 }
-.nav-button{
-  background-color:inherit;
+.nav-button {
+  background-color: inherit;
   border: 0px solid black;
-
 }
 .nav-item {
   width: 35px;
@@ -86,23 +85,18 @@ main {
   padding-top: 5px;
   padding-left: var(--min-space-around-cards);
   padding-right: var(--min-space-around-cards);
-  
+
   scroll-margin-top: 100px;
   border-radius: var(--card-border-radius);
   position: relative;
   width: 100%;
   __height: 300px;
   __min-height: 300px;
-  
 
   __padding-bottom: auto;
-
-  
-  
 }
 
 .card__heading {
-  
   margin: 10px 0 10px 0;
 }
 .card__text {
@@ -119,7 +113,7 @@ main {
   position: absolute;
   top: -8px;
   right: 14px;
-  z-index: 30; 
+  z-index: 30;
   filter: var(--color-primary-dark-filter);
 }
 
@@ -128,7 +122,7 @@ main {
   flex-direction: row;
   /*TODO*/
   flex-wrap: wrap;
-  justify-content:center;
+  justify-content: center;
   gap: 20px;
   __position: absolute;
   __width: 100%;
@@ -137,15 +131,13 @@ main {
   /*TODO*/
   left: 50%;
   __transform: translate(-50%);
-  padding-left:20px;
-  padding-right:20px;
-  padding-top:25px;
-  padding-bottom:25px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 25px;
+  padding-bottom: 25px;
 
-  __margin-top:65px;
-
+  __margin-top: 65px;
 }
-
 
 /*calc(var(--card-width) * 2 + var(--min-space-around-cards) *3 )*/
 /*calc((var(--card-width)) * 2)*/

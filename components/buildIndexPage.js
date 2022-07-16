@@ -69,7 +69,7 @@ export function BuildIndexPage(questions) {
     wordCloud.classList.add("holder");
     article.append(wordCloud);
 
-    questions[index].tags.forEach((tag, index) => {
+    questions[index].tags.forEach((tag) => {
       const button = document.createElement("button");
       button.setAttribute("type", "button");
       button.classList.add("btn__a");
@@ -81,7 +81,6 @@ export function BuildIndexPage(questions) {
 
 /*
 const questions = [
-<<<<<<< HEAD:components/questions.js
   {
     question: "Wie heisst die Hauptstadt von Frankreich?",
     answer: "Paris",
@@ -102,28 +101,6 @@ const questions = [
     answer: "42",
     tags: ["39", "42", "70", "420", "6000", "9000"],
   },
-=======
-    {
-        question: "Wie heisst die Hauptstadt von Frankreich?",
-        answer: "Paris",
-        tags: ["Marseille", "Paris", "Lille", "Lyon"],
-    },
-    {
-        question: "Wie heisst die Hauptstadt von Paraguay?",
-        answer: "Asunsión",
-        tags: ["Montevideo", "La Paz", "Asunción", "Buenos Aires"],
-    },
-    {
-        question: "Auf welcher Insel liegt Haiti?",
-        answer: "Hispaniola",
-        tags: ["Aruba", "Curaçao", "Bonaire", "Hispaniola"],
-    },
-    {
-        question: "Was ist der Sinn des Lebens?",
-        answer: "42",
-        tags: ["39", "42", "5000", "9000"],
-    },
->>>>>>> umbau:components/buildIndexPage.js
 ];
 
 */

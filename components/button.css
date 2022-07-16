@@ -1,43 +1,36 @@
-.button__gen{
-    display: block;
-    border-radius:6px;
-    border:0px;
-    background-color: var(--complementary-violet);
-    color:000000;
-    
+.button__gen {
+  display: block;
+  border-radius: 6px;
+  border: 0px;
+  background-color: var(--complementary-violet);
+  color: 000000;
 }
 
 .btn__show {
+  width: 100px;
+  height: 30px;
+  margin-top: 20px;
+  __position: absolute;
+  _bottom: 80px;
+  __left: 50%;
+  __transform: translate(-50%);
+  color: black;
+}
 
-   
-    width: 100px;
-    height: 30px;
-    margin-top:20px; 
-    __position: absolute;
-    _bottom: 80px;
-    __left: 50%;
-    __transform: translate(-50%);
-    color:black;
-    
-  }
+.btn__a {
+  padding: 5px 10px 5px 10px;
+  background-color: var(--color-primary-dark);
+  border: 0px solid black;
+  border-radius: 6px;
+  color: #000000;
+}
 
-  .btn__a {
-
-    padding:5px 10px 5px 10px;
-    background-color: var(--color-primary-dark);
-    border:0px solid black;
-    border-radius: 6px;
-    color:#000000;
-  }
-
-  .btn__submit {
-
-    width: 100px;
-    height: 30px;
-    position: absolute;
-    top: 380px;
-    left: 50%;
-    transform: translateX(-50%);
-    color:black;
-  
-  }
+.btn__submit {
+  width: 100px;
+  height: 30px;
+  position: absolute;
+  top: 380px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: black;
+}
