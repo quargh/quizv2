@@ -1,6 +1,6 @@
-import { BuildIndex } from "./components/buildIndex.js";
-import { BuildBookmarks } from "./components/buildBookmarks.js";
-import { Bookmark } from "./components/bookmark/bookmark.js";
+import { BuildIndexPage } from "./components/buildIndexPage.js";
+import { BuildBookmarksPage } from "./components/buildBookmarksPage.js";
+import { SetBookmarks } from "./components/bookmark/setBookmarks.js";
 import { ButtonAnswerClick } from "./components/button__answer/button__answer--click.js";
 
 let questions = [];
@@ -14,24 +14,25 @@ fetch(url)
 
 function mapResults(results) {
   questions = results.map((result) => {
-    let random = Math.round(Math.random());
-
-    let isBookmarked = false;
-    if (random % 2 === 0) {
-      isBookmarked = true;
-    }
-
     return {
-      question: result.question,
-      answer: result.correct_answer,
-      tags: result.incorrect_answers,
-      isBookmarked: isBookmarked,
+      // Html Entities decoden
+      question: decodeHtml(result.question),
+      answer: decodeHtml(result.correct_answer),
+      tags: result.incorrect_answers.map((answer) => {
+        return (answer = decodeHtml(answer));
+      }),
+      // Zu Testzwecken 'isBookmarked' mit einer Wahrscheinlichkeit von 1:1 auf true setzen
+      isBookmarked: Math.round(Math.random()) % 2,
     };
   });
-  console.log(questions);
-  BuildIndex(questions);
-  Bookmark(questions);
-  ButtonAnswerClick();
+  // Answer an Zufallsposition zu Tags-Array hinzufuegen
+  questions.forEach((question) => {
+    const random = Math.floor(Math.random() * question.tags.length);
+    question.tags.splice(random, 0, question.answer);
+  });
+
+  //console.log(questions);
+  setupIndexPage();
 }
 
 // NAVIGATION --------------------------------------------------------->
@@ -57,7 +58,7 @@ navButtons.forEach((navButton, index) => {
 
   function onNavButtonClick() {
     const modulo = index % 4;
-    console.log("click modulo: " + modulo);
+    //console.log("click modulo: " + modulo);
 
     pages.forEach((page, index) => {
       if (index !== modulo) {
@@ -66,17 +67,36 @@ navButtons.forEach((navButton, index) => {
         page.style.display = "block";
       }
     });
+    if (modulo === 0) {
+      //console.log("runIndex");
+      setupIndexPage();
+    }
     if (modulo === 1) {
-      BuildBookmarks(questions);
-      Bookmark(questions);
-      ButtonAnswerClick();
+      setupBookmarksPage();
     }
   }
 });
 
+function setupIndexPage() {
+  //console.log(questions);
+  BuildIndexPage(questions);
+  SetBookmarks(questions);
+  ButtonAnswerClick();
+}
+function setupBookmarksPage() {
+  BuildBookmarksPage(questions);
+  SetBookmarks(questions, setupBookmarksPage);
+  ButtonAnswerClick();
+}
 //Page abschalten:
 //page.style.display = "none";
 
 //Welcher Button wurde gedrückt?
 //const x = 11 % 4;
 //console.log(x);
+
+function decodeHtml(html) {
+  let txt = document.createElement("textarea");
+  txt.innerHTML = html;
+  return txt.value;
+}
