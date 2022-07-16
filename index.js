@@ -1,10 +1,39 @@
-import { SetQuestions } from "./components/questions.js";
-import { Bookmark } from "./components/bookmark/bookmark.js";
+import { BuildIndexPage } from "./components/buildIndexPage.js";
+import { BuildBookmarksPage } from "./components/buildBookmarksPage.js";
+import { SetBookmarks } from "./components/bookmark/setBookmarks.js";
 import { ButtonAnswerClick } from "./components/button__answer/button__answer--click.js";
 
-SetQuestions();
-Bookmark();
-ButtonAnswerClick();
+let questions = [];
+const url = "https://opentdb.com/api.php?amount=10";
+
+fetch(url)
+  // nimmt den Inhalt als Text, der in JSON formatiert ist und wandelt es in JS Objekt um:
+  .then((jsonObject) => jsonObject.json())
+  .then((javascriptObject) => mapResults(javascriptObject.results))
+  .catch((error) => console.error(error.message));
+
+function mapResults(results) {
+  questions = results.map((result) => {
+    return {
+      // Html Entities decoden
+      question: decodeHtml(result.question),
+      answer: decodeHtml(result.correct_answer),
+      tags: result.incorrect_answers.map((answer) => {
+        return (answer = decodeHtml(answer));
+      }),
+      // Zu Testzwecken 'isBookmarked' mit einer Wahrscheinlichkeit von 1:1 auf true setzen
+      isBookmarked: Math.round(Math.random()) % 2,
+    };
+  });
+  // Answer an Zufallsposition zu Tags-Array hinzufuegen
+  questions.forEach((question) => {
+    const random = Math.floor(Math.random() * question.tags.length);
+    question.tags.splice(random, 0, question.answer);
+  });
+
+  //console.log(questions);
+  setupIndexPage();
+}
 
 // NAVIGATION --------------------------------------------------------->
 
@@ -15,7 +44,7 @@ const pages = document.querySelectorAll('[data-js="pages"]');
 // alles außer Index wegschalten
 
 pages.forEach((page, index) => {
-  if (index != 0) {
+  if (index !== 0) {
     page.style.display = "none";
   } else {
     page.style.display = "block";
@@ -29,21 +58,45 @@ navButtons.forEach((navButton, index) => {
 
   function onNavButtonClick() {
     const modulo = index % 4;
-    console.log("click: " + modulo);
+    //console.log("click modulo: " + modulo);
 
     pages.forEach((page, index) => {
-      if (index != modulo) {
+      if (index !== modulo) {
         page.style.display = "none";
       } else {
         page.style.display = "block";
       }
     });
+    if (modulo === 0) {
+      //console.log("runIndex");
+      setupIndexPage();
+    }
+    if (modulo === 1) {
+      setupBookmarksPage();
+    }
   }
 });
 
+function setupIndexPage() {
+  //console.log(questions);
+  BuildIndexPage(questions);
+  SetBookmarks(questions);
+  ButtonAnswerClick();
+}
+function setupBookmarksPage() {
+  BuildBookmarksPage(questions);
+  SetBookmarks(questions, setupBookmarksPage);
+  ButtonAnswerClick();
+}
 //Page abschalten:
 //page.style.display = "none";
 
 //Welcher Button wurde gedrückt?
 //const x = 11 % 4;
 //console.log(x);
+
+function decodeHtml(html) {
+  let txt = document.createElement("textarea");
+  txt.innerHTML = html;
+  return txt.value;
+}

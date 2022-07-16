@@ -1,8 +1,10 @@
-export function SetQuestions() {
+export function BuildIndexPage(questions) {
   // Build Cards dynamically via JS
 
-  const mainSection = document.querySelector('[data-js="main-section"]');
-  //const cardList = document.querySelectorAll();
+  const mainSection = document.querySelector('[data-js="main-section-index"]');
+
+  //clear all
+  mainSection.innerHTML = "";
 
   questions.forEach((card, index) => {
     const article = document.createElement("article");
@@ -15,8 +17,13 @@ export function SetQuestions() {
     article.append(questionHeadline);
 
     const image = document.createElement("img");
+    image.setAttribute("data-page", index);
     image.setAttribute("data-js", "button__bookmark");
-    image.setAttribute("src", "/images/bookmark-outline.svg");
+    if (questions[index].isBookmarked) {
+      image.setAttribute("src", "/images/bookmark.svg");
+    } else {
+      image.setAttribute("src", "/images/bookmark-outline.svg");
+    }
     image.setAttribute("alt", "bookmark");
     image.classList.add("card__bookmark");
     article.append(image);
@@ -72,7 +79,9 @@ export function SetQuestions() {
   });
 }
 
+/*
 const questions = [
+<<<<<<< HEAD:components/questions.js
   {
     question: "Wie heisst die Hauptstadt von Frankreich?",
     answer: "Paris",
@@ -93,4 +102,28 @@ const questions = [
     answer: "42",
     tags: ["39", "42", "70", "420", "6000", "9000"],
   },
+=======
+    {
+        question: "Wie heisst die Hauptstadt von Frankreich?",
+        answer: "Paris",
+        tags: ["Marseille", "Paris", "Lille", "Lyon"],
+    },
+    {
+        question: "Wie heisst die Hauptstadt von Paraguay?",
+        answer: "Asunsión",
+        tags: ["Montevideo", "La Paz", "Asunción", "Buenos Aires"],
+    },
+    {
+        question: "Auf welcher Insel liegt Haiti?",
+        answer: "Hispaniola",
+        tags: ["Aruba", "Curaçao", "Bonaire", "Hispaniola"],
+    },
+    {
+        question: "Was ist der Sinn des Lebens?",
+        answer: "42",
+        tags: ["39", "42", "5000", "9000"],
+    },
+>>>>>>> umbau:components/buildIndexPage.js
 ];
+
+*/
