@@ -3,6 +3,8 @@ import { BuildBookmarksPage } from "./components/buildBookmarksPage.js";
 import { SetBookmarks } from "./components/bookmark/setBookmarks.js";
 import { ButtonAnswerClick } from "./components/button__answer/button__answer--click.js";
 
+console.clear();
+
 let questions = [];
 const url = "https://opentdb.com/api.php?amount=10";
 
@@ -31,7 +33,7 @@ function mapResults(results) {
     question.tags.splice(random, 0, question.answer);
   });
 
-  //console.log(questions);
+  console.log(questions);
   setupIndexPage();
 }
 
@@ -100,3 +102,46 @@ function decodeHtml(html) {
   txt.innerHTML = html;
   return txt.value;
 }
+
+// Create page: submit button
+
+const form = document.querySelector('[data-js="form"]');
+
+form.addEventListener("submit", (event) => {
+  // Standardverhalten verhindern
+  event.preventDefault();
+
+  const questionElement = form.elements.question;
+  const questionValue = questionElement.value.trim();
+
+  const answerElement = form.elements.answer;
+  const answerValue = answerElement.value.trim();
+
+  const tagsElement = form.elements.tags;
+  const tagsValue = tagsElement.value.split(",").map(function (item) {
+    return item.trim();
+  });
+
+  // Richtige Antwort in Tags splicen
+  const random = Math.floor(Math.random() * tagsValue.length);
+  tagsValue.splice(random, 0, answerValue);
+
+  console.log(questionValue);
+  console.log(answerValue);
+  console.log(tagsValue);
+
+  // In Questions pushen
+  let obj = {};
+  obj.question = questionValue;
+  obj.answer = answerValue;
+  obj.tags = tagsValue;
+  obj.isBookmarked = false;
+
+  questions.unshift(obj);
+
+  console.clear();
+  console.log(questions);
+
+  form.reset();
+  questionElement.focus();
+});

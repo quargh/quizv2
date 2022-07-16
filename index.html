@@ -158,15 +158,21 @@
           <section class="create__section">
             <article class="card__create">
               <div class="create__holder">
-                <form action="" method="get">
+                <form
+                  aria-label="Create a post"
+                  action=""
+                  method="get"
+                  data-js="form"
+                  autocomplete="off"
+                >
                   <div>
-                    <label class="question-headline" for="question-text">
+                    <label class="question-headline" for="question-input">
                       Add your question
                     </label>
 
                     <textarea
                       class="area-1"
-                      id="question"
+                      id="question-input"
                       name="question"
                       rows="4"
                       cols="10"
@@ -174,13 +180,13 @@
                     ></textarea>
                   </div>
                   <div>
-                    <label class="answer-headline" for="answer-text">
+                    <label class="answer-headline" for="answer-input">
                       Add your answer
                     </label>
 
                     <textarea
                       class="area-2"
-                      id="answer"
+                      id="answer-input"
                       name="answer"
                       rows="4"
                       cols="10"
@@ -188,13 +194,13 @@
                     ></textarea>
                   </div>
                   <div>
-                    <label class="tags-headline" for="tags-text">
+                    <label class="tags-headline" for="tags-input">
                       Add tags divided by comma
                     </label>
 
                     <textarea
                       class="area-3"
-                      id="tags"
+                      id="tags-input"
                       name="tags"
                       rows="1"
                       cols="10"
@@ -202,11 +208,7 @@
                     ></textarea>
                   </div>
 
-                  <button
-                    type="button"
-                    class="button__gen btn__submit"
-                    value="submit"
-                  >
+                  <button class="button__gen btn__submit" value="submit">
                     Submit
                   </button>
                 </form>
