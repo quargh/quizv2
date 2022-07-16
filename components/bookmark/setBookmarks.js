@@ -33,7 +33,9 @@ export function SetBookmarks(questions, callback) {
         questions[questionsIndex].isBookmarked = false;
         button.src = "/images/bookmark-outline.svg";
       }
-      callback();
+      if (callback !== null) {
+        callback();
+      }
     }
   });
 }
